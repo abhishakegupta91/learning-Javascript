@@ -129,6 +129,3 @@ person.myFunc({
     fatherName:'Michael',
     daughterAge:5
 });
-
-console.log('>>>>>>>> Loops');
-// Repeat a piece of code when a condition is true.
