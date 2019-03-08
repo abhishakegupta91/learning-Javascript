@@ -19,13 +19,6 @@ in order to figure out, which student has passed an exam and what kind of degree
 
 console.log('>>>>>>>>>>>> Coding Test');
 var students = [
-    ['John', 47, 46],
-    ['Bob', 23, 24],
-    ['Nick', 40, 35],
-    ['Alex', 44, 45],
-];
-
-var students = [
     {
         name: 'John',
         score1: 47,
@@ -59,13 +52,17 @@ function calcFinal() {
     console.log('Calculate');
     for (var i = 0; i < students.length; i++) {
         students[i].sum = calculateSum(students[i]['score1'], students[i]['score2']);
-
-        for (var j=0; j<pass_limit.length; j++){
-            if (students[i].sum >= pass_limit[j]) {
-                students[i].degree = degree[j];
-                console.log(students[i].name + ' has got ' + degree[j] + ' degree');
-                break;
-            }    
+        if (students[i].sum >= 51) {
+            console.log(students[i].name + ' has passed final exam successfully');
+            for (var j = 0; j < pass_limit.length; j++) {
+                if (students[i].sum >= pass_limit[j]) {
+                    students[i].degree = degree[j];
+                    console.log(students[i].name + ' has got ' + degree[j] + ' degree');
+                    break;
+                }
+            }
+        } else {
+            console.log(students[i].name + " has failed the Exam");
         }
     }
 }
