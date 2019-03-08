@@ -58,19 +58,14 @@ function calculateSum(score1, score2) {
 function calcFinal() {
     console.log('Calculate');
     for (var i = 0; i < students.length; i++) {
-        total = calculateSum(students[i]['score1'], students[i]['score2']);
-        if (total >= pass_limit[0]) {
-            console.log(students[i]['name'] + ' has got ' + degree[0] + ' degree');
-        } else if (total >= pass_limit[1]) {
-            console.log(students[i]['name'] + ' has got ' + degree[0] + ' degree');
-        } else if (total >= pass_limit[2]) {
-            console.log(students[i]['name'] + ' has got ' + degree[0] + ' degree');
-        } else if (total >= pass_limit[3]) {
-            console.log(students[i]['name'] + ' has got ' + degree[0] + ' degree');
-        } else if (total >= pass_limit[4]) {
-            console.log(students[i]['name'] + ' has got ' + degree[0] + ' degree');
-        } else {
-            console.log(students[i]['name'] + ' Failed');
+        students[i].sum = calculateSum(students[i]['score1'], students[i]['score2']);
+
+        for (var j=0; j<pass_limit.length; j++){
+            if (students[i].sum >= pass_limit[j]) {
+                students[i].degree = degree[j];
+                console.log(students[i].name + ' has got ' + degree[j] + ' degree');
+                break;
+            }    
         }
     }
 }
@@ -78,3 +73,4 @@ function calcFinal() {
 // students is a glocbal variable,
 // hence available inside the function calcFinal.
 calcFinal();
+console.log(students);
