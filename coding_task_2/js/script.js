@@ -25,27 +25,56 @@ var students = [
     ['Alex', 44, 45],
 ];
 
+var students = [
+    {
+        name: 'John',
+        score1: 47,
+        score2: 46,
+    },
+    {
+        name: 'Bob',
+        score1: 23,
+        score2: 24,
+    },
+    {
+        name: 'Nick',
+        score1: 40,
+        score2: 35,
+    },
+    {
+        name: 'Alex',
+        score1: 44,
+        score2: 45,
+    }
+]
+
 var degree = ['A', 'B', 'C', 'D', 'E'];
 var pass_limit = [91, 81, 71, 61, 51];
 
-function totalScore(score1, score2) {
+function calculateSum(score1, score2) {
     return score1 + score2;
 }
 
-console.log('Calculate');
-for (var i = 0; i < students.length; i++) {
-    total = totalScore(students[i][1], students[i][2]);
-    if (total >= pass_limit[0]) {
-        console.log(students[i][0] + ' has got ' + degree[0] + ' degree');
-    } else if(total >= pass_limit[1]){
-        console.log(students[i][0] + ' has got ' + degree[0] + ' degree');
-    } else if(total >= pass_limit[2]){
-        console.log(students[i][0] + ' has got ' + degree[0] + ' degree');
-    } else if(total >= pass_limit[3]){
-        console.log(students[i][0] + ' has got ' + degree[0] + ' degree');
-    } else if(total >= pass_limit[4]){
-        console.log(students[i][0] + ' has got ' + degree[0] + ' degree');
-    } else{
-        console.log(students[i][0] + ' Failed');
+function calcFinal() {
+    console.log('Calculate');
+    for (var i = 0; i < students.length; i++) {
+        total = calculateSum(students[i]['score1'], students[i]['score2']);
+        if (total >= pass_limit[0]) {
+            console.log(students[i]['name'] + ' has got ' + degree[0] + ' degree');
+        } else if (total >= pass_limit[1]) {
+            console.log(students[i]['name'] + ' has got ' + degree[0] + ' degree');
+        } else if (total >= pass_limit[2]) {
+            console.log(students[i]['name'] + ' has got ' + degree[0] + ' degree');
+        } else if (total >= pass_limit[3]) {
+            console.log(students[i]['name'] + ' has got ' + degree[0] + ' degree');
+        } else if (total >= pass_limit[4]) {
+            console.log(students[i]['name'] + ' has got ' + degree[0] + ' degree');
+        } else {
+            console.log(students[i]['name'] + ' Failed');
+        }
     }
 }
+
+// students is a glocbal variable,
+// hence available inside the function calcFinal.
+calcFinal();
