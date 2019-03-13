@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    </link>
+    <link href="css/main.css" type="text/css" rel="stylesheet">
+    </link>
+    <title>Note Maker</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h2>Note Maker</h2>
+            <form id="search-note">
+                <input type='text' value="search note...">
+            </form>
+        </header>
+
+        <div class="note-list">
+            <ul>
+                <li>
+                    <p>First Note</p>
+                    <input class="edit-note" type="text">
+                    <p>
+                        <i class="fa fa-pencil-square-o"></i>
+                        <i class="fa fa-times"></i>
+                    </p>
+                </li>
+                <li>
+                    <p>Second Note</p>
+                    <input class="edit-note" type="text">
+                    <p>
+                        <i class="fa fa-pencil-square-o"></i>
+                        <i class="fa fa-times"></i>
+                    </p>
+                </li>
+                <li>
+                    <p>Third Note</p>
+                    <input class="edit-note" type="text">
+                    <p>
+                        <i class="fa fa-pencil-square-o"></i>
+                        <i class="fa fa-times"></i></p>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <div class="hide-list">
+            <label for="hide">Hide list </label>
+            <input type="checkbox" id="hide">
+        </div>
+        <hr>
+        <div class="add-notes">
+            <form id="add">
+                <input type="text" placeholder="Add notes">
+                <input type="submit" value="submit" id="add-btn">
+            </form>
+
+        </div>
+    </div>
+
+</body>
+<script src="js/script.js"></script>
+
+</html>
