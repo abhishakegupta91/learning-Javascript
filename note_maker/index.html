@@ -5,6 +5,7 @@
     </link>
     <link href="css/main.css" type="text/css" rel="stylesheet">
     </link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Note Maker</title>
 </head>
 
@@ -18,7 +19,7 @@
         </header>
 
         <div class="note-list">
-            <ul>
+            <ul id='list'>
                 <li>
                     <p>First Note</p>
                     <input class="edit-note" type="text">
@@ -52,7 +53,7 @@
         <hr>
         <div class="add-notes">
             <form id="add">
-                <input type="text" placeholder="Add notes">
+                <input type="text" id="add-input" placeholder="Add notes">
                 <input type="submit" value="submit" id="add-btn">
             </form>
 
@@ -60,6 +61,8 @@
     </div>
 
 </body>
-<script src="js/script.js"></script>
-
+<!-- <script src="js/script.js"></script> -->
+<!-- <script src="js/interactive_dom_func.js"></script> -->
+<!-- <script src="js/get_attribute.js"></script> -->
+<script src="js/navigate_bw_elements.js"></script>
 </html>
